@@ -1,5 +1,5 @@
 import Card from './Card'
-import './Intervalo.css'
+import '../Intervalo.css'
 
 import React from 'react'
 

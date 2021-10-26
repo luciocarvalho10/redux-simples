@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import './App.css'
-import Intervalo from './components/Intervalo'
-import Media from './components/Media'
-import Soma from './components/Soma'
-import Sorteio from './components/Sorteio'
+import '../../App.css'
+import Intervalo from './Intervalo'
+import Media from './Media'
+import Soma from './Soma'
+import Sorteio from './Sorteio'
 
 function App() {
   const [min, setMin] = useState(100)
