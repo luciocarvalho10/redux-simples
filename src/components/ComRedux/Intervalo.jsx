@@ -13,11 +13,19 @@ const Intervalo = props => {
       <div className="Intervalo">
         <span>
           <strong>Mínimo:</strong>
-          <input type="number" value={min} onChange={e => props.propMinAction(+e.target.value)} />
+          <input
+            type="number"
+            value={min}
+            onChange={e => props.propMinAction(+e.target.value)}
+          />
         </span>
         <span>
           <strong>Máximo:</strong>
-          <input type="number" value={max} onChange={e => props.propMaxAction(+e.target.value)} />
+          <input
+            type="number"
+            value={max}
+            onChange={e => props.propMaxAction(+e.target.value)}
+          />
         </span>
       </div>
     </Card>
@@ -30,12 +38,8 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-  propMinAction(min) {
-    dispatch(minAction(min))
-  },
-  propMaxAction(max) {
-    dispatch(maxAction(max))
-  }
+  propMinAction: min => dispatch(minAction(min)),
+  propMaxAction: max => dispatch(maxAction(max))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Intervalo)
